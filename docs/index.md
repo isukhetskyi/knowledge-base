@@ -3,6 +3,7 @@
 Here you can find links to various sections of the site:
 
 - [About](about.md)
-- [Cloud related articles](posts/cloud/index.md)
+- [Cloud](posts/cloud/index.md)
+- [.NET](posts/.NET/csharp/articles.md)
 
 Feel free to explore the content and learn more about the topics covered in this site!
