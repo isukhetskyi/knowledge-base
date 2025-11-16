@@ -29,10 +29,6 @@ Experts stress that practicing mock interviews out loud is critical for masterin
 
 ***
 
-Here is a summary of the post, formatted in Markdown and under 250 words.
-
-***
-
 The author argues that with the rise of AI-generated code, effective code review is more important than ever. However, many engineers make key mistakes.
 
 The biggest error is **reviewing only the diff**. The most valuable comments come from a holistic understanding of the system, such as pointing out existing code or ensuring the change maintains long-term consistency.
@@ -44,3 +40,40 @@ The author outlines five key principles for better reviews:
 3.  **Use blocking reviews clearly:** If a change *must not* be merged, use a formal blocking review. Don't leave ambiguous, critical comments on a non-blocking review.
 4.  **Bias towards approval:** In a standard SaaS codebase, most reviews should be approvals. A high rate of blocking reviews often signals a structural problem, like gatekeeping or misaligned team incentives.
 5.  **Review AI code differently:** These rules apply to AI-generated code, *except* for the bias to approve. The author states you "can and should gatekeep AI-generated PRs as much as you want."
+
+
+###[Good software development habits](https://zarar.dev/good-software-development-habits/) by [Zarar's blog](https://zarar.dev/me/)
+
+
+***
+
+The author outlines ten personal habits adopted to increase speed and maintain quality in software development. The core philosophy emphasizes pragmatism, continuous improvement, and ease of change.
+
+**Key habits include:**
+
+* **Micro-Commits:** Keep commits extremely small to simplify reverts and avoid merge conflicts.
+* **Continuous Refactoring:** Follow Kent Beck’s advice: "Make the change easy, then make the easy change." Small, frequent refactors are superior to massive overhauls.
+* **Deploy Frequently:** Treat undeployed code as a liability. Frequent deploys prove progress, while tests provide confidence.
+* **Pragmatic Testing:** Avoid testing framework capabilities. Use TDD to design APIs from a consumer perspective, but avoid dogma. If code is hard to test, it usually indicates poor design.
+* **The Rule of Three:** Copy-pasting is acceptable once. If code is duplicated a third time, it must be abstracted to prevent divergence.
+* **Modularization:** If a function doesn't fit an existing module, create a new one rather than forcing it where it doesn't belong.
+* **Prioritize Technical Debt:** Focus only on debt that blocks current work or will definitely block future work. Ignore hypothetical future problems.
+* **Embrace Design Decay:** Accept that designs inevitably go stale. Success is defined by how well you manage change, not by creating a perfect, static design.
+
+
+###[Stop postponing things by embracing the mess](https://www.deprocrastination.co/blog/stop-postponing-things-by-embracing-the-mess) by [deprocrastination blog](https://www.deprocrastination.co/)
+
+***
+
+The article argues that we procrastinate because we view "today" as messy and imperfect, while holding onto a false, simplified belief that "tomorrow will be better" and more productive. When today inevitably deviates from our perfect expectations (e.g., a meeting is canceled, we wake up late), we feel justified in getting distracted and putting off work.
+
+The solution is to **"Embrace the mess."** This means accepting that the perfect, motivated moment is not coming. When interruptions happen, the correct response is to simply **"Reset"** and make the best of the current situation.
+
+To cultivate this mindset, the author suggests:
+
+* **Don't be "precious" about routines:** They make us fragile and give us an excuse to procrastinate when broken.
+* **View work in small chunks (15-30 minutes):** Don't build tasks up into 8-hour-long behemoths.
+* **Accept imperfect focus:** Our concentration naturally wanes; what matters is not getting sidetracked during the lulls.
+* **Aim for "good enough" productivity:** Treat productivity as a spectrum (aiming for 50%) rather than an all-or-nothing (100% or 0%) switch.
+
+Ultimately, the core principle is that **imperfect action is always better than perfect inaction**. We discover the "right" way to do something *by* starting, not by waiting.
