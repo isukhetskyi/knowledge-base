@@ -61,7 +61,7 @@ The author outlines ten personal habits adopted to increase speed and maintain q
 * **Embrace Design Decay:** Accept that designs inevitably go stale. Success is defined by how well you manage change, not by creating a perfect, static design.
 
 
-###[Stop postponing things by embracing the mess](https://www.deprocrastination.co/blog/stop-postponing-things-by-embracing-the-mess) by [deprocrastination blog](https://www.deprocrastination.co/)
+###[Stop postponing things by embracing the mess](https://www.deprocrastination.co/blog/stop-postponing-things-by-embracing-the-mess) by [deprocrastination blog.](https://www.deprocrastination.co/)
 
 ***
 
@@ -77,3 +77,42 @@ To cultivate this mindset, the author suggests:
 * **Aim for "good enough" productivity:** Treat productivity as a spectrum (aiming for 50%) rather than an all-or-nothing (100% or 0%) switch.
 
 Ultimately, the core principle is that **imperfect action is always better than perfect inaction**. We discover the "right" way to do something *by* starting, not by waiting.
+
+
+###[Falsehoods Junior Developers believe about becoming Senior](https://vadimkravcenko.com/shorts/falsehoods-junior-developers-believe-about-becoming-senior) by [Vadim Kravcenko.](https://vadimkravcenko.com/)
+
+***
+
+Many junior developers romanticize the senior role, believing it grants ultimate knowledge and an escape from "boring" work. This essay debunks common "falsehoods" juniors believe about seniority, revealing a more complex and nuanced reality.
+
+The author explains that career advancement is less about technical magic (like mastering terminal shortcuts) and more about embracing new responsibilities. The complexity of the problems a developer faces simply grows with their skill.
+
+Here are the key myths and their corresponding realities:
+
+* **Having All the Answers**
+    * **Myth:** Seniors can solve any bug in minutes.
+    * **Reality:** Seniority is not about possessing all knowledge but about effectively working with uncertainty. The job is to find solutions, which often means being comfortable saying, "I don't know" and then asking the right questions to figure it out.
+
+* **Working with Latest Tech**
+    * **Myth:** Seniors get to build exciting new projects.
+    * **Reality:** A significant part of the role involves maintaining, debugging, and patching legacy systems that house years of critical business logic.
+
+* **No More Boring Tasks**
+    * **Myth:** Seniority means avoiding mundane work.
+    * **Reality:** The role is filled with meetings, documentation, and code reviews. While often tedious, these tasks are essential for team alignment, maintainability, and mentoring, which seniors eventually find rewarding.
+
+* **Making Big Changes**
+    * **Myth:** Seniors can immediately implement their million-dollar ideas.
+    * **Reality:** Real change requires building a business case, getting management approval, and aligning with budgets and organizational goals.
+
+* **Time to Relax**
+    * **Myth:** Seniors have a perfect work-life balance.
+    * **Reality:** The workload evolves. With more responsibility for mentoring, planning, and project delivery, work often extends into personal time.
+
+* **Deciding What to Do**
+    * **Myth:** Seniors just tell others what to do.
+    * **Reality:** Seniors are expected *to know* what needs to be done, transitioning from well-defined tasks to ambiguous, high-level problems (e.g., "Integrate AI into HR"). This autonomy comes with pressure and anxiety.
+
+* **Becoming Irreplaceable**
+    * **Myth:** Seniority equals job security.
+    * **Reality:** No one is irreplaceable. Economic shifts, strategy changes, or project cancellations can lead to layoffs at all levels. True security comes from being a lifelong learner and staying adaptable.
