@@ -116,3 +116,26 @@ Here are the key myths and their corresponding realities:
 * **Becoming Irreplaceable**
     * **Myth:** Seniority equals job security.
     * **Reality:** No one is irreplaceable. Economic shifts, strategy changes, or project cancellations can lead to layoffs at all levels. True security comes from being a lifelong learner and staying adaptable.
+
+
+### [Conscious Debugging: 10 Effective Strategies That Actually Work 🐛](https://thetshaped.dev/p/conscious-debugging-10-effective-debugging-strategies-debug-like-pro) - by [Petar Ivanov.](https://thetshaped.dev/)
+
+***
+
+Debugging is a skill that can be mastered with the right mindset and strategies. This article outlines ten practical techniques to find and fix bugs efficiently, saving time and frustration.
+
+**Part 1: Set Yourself Up For Success**
+*   **Reproduce Consistently:** Create step-by-step instructions to trigger the bug every time. Understand the full flow, especially in microservices.
+*   **Reproduce Quickly:** Optimize your environment to jump straight to the problematic state, saving time on every iteration.
+*   **Capture Full Context:** Gather all available information (logs, user actions, system state) before diving in. Tools like session replays can be invaluable here.
+
+**Part 2: Active Debugging Techniques**
+*   **Isolate the Problem:** Use a "binary search" approach—comment out half the code or use breakpoints to narrow down the scope quickly.
+*   **Use Your Debugger:** Don't just guess. Use breakpoints, inspect variables, and step through code to see the actual execution flow.
+*   **Rubber Duck It:** Explain your code line-by-line to an inanimate object (or colleague). Speaking aloud often reveals assumptions you didn't know you had.
+*   **Form & Test Hypotheses:** Apply the scientific method: Form a hypothesis -> Experiment (log/break) -> Observe -> Fix -> Verify. Avoid random changes.
+
+**Part 3: When You’re Stuck**
+*   **Document Progress:** Keep a log of what you've tried to avoid repeating failed experiments and to make asking for help easier.
+*   **Take Strategic Breaks:** Step away (walk, rest) to let your subconscious process the problem. Solutions often appear when you disengage.
+*   **Leverage AI Smartly:** Use AI tools as debugging partners. Provide them with full context (logs, code, recordings) to generate hypotheses you might have missed.
