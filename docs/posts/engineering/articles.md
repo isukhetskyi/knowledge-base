@@ -25,7 +25,7 @@ A successful preparation strategy involves learning core concepts (caching, shar
 Experts stress that practicing mock interviews out loud is critical for mastering communication and problem-scoping.
 
 
-###[Mistakes I see engineers making in their code reviews](https://www.seangoedecke.com/good-code-reviews/) by [Sean Goedecke.](https://www.seangoedecke.com/)
+### [Mistakes I see engineers making in their code reviews](https://www.seangoedecke.com/good-code-reviews/) by [Sean Goedecke.](https://www.seangoedecke.com/)
 
 ***
 
@@ -42,7 +42,7 @@ The author outlines five key principles for better reviews:
 5.  **Review AI code differently:** These rules apply to AI-generated code, *except* for the bias to approve. The author states you "can and should gatekeep AI-generated PRs as much as you want."
 
 
-###[Good software development habits](https://zarar.dev/good-software-development-habits/) by [Zarar's blog](https://zarar.dev/me/)
+### [Good software development habits](https://zarar.dev/good-software-development-habits/) by [Zarar's blog](https://zarar.dev/me/)
 
 
 ***
@@ -61,7 +61,7 @@ The author outlines ten personal habits adopted to increase speed and maintain q
 * **Embrace Design Decay:** Accept that designs inevitably go stale. Success is defined by how well you manage change, not by creating a perfect, static design.
 
 
-###[Stop postponing things by embracing the mess](https://www.deprocrastination.co/blog/stop-postponing-things-by-embracing-the-mess) by [deprocrastination blog.](https://www.deprocrastination.co/)
+### [Stop postponing things by embracing the mess](https://www.deprocrastination.co/blog/stop-postponing-things-by-embracing-the-mess) by [deprocrastination blog.](https://www.deprocrastination.co/)
 
 ***
 
@@ -79,7 +79,7 @@ To cultivate this mindset, the author suggests:
 Ultimately, the core principle is that **imperfect action is always better than perfect inaction**. We discover the "right" way to do something *by* starting, not by waiting.
 
 
-###[Falsehoods Junior Developers believe about becoming Senior](https://vadimkravcenko.com/shorts/falsehoods-junior-developers-believe-about-becoming-senior) by [Vadim Kravcenko.](https://vadimkravcenko.com/)
+### [Falsehoods Junior Developers believe about becoming Senior](https://vadimkravcenko.com/shorts/falsehoods-junior-developers-believe-about-becoming-senior) by [Vadim Kravcenko.](https://vadimkravcenko.com/)
 
 ***
 
