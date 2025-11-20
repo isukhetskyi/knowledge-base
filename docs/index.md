@@ -4,7 +4,7 @@ Here you can find links to various sections of the site:
 
 - [About](about.md)
 - [Cloud](posts/cloud/index.md)
-- [.NET](posts/.NET/csharp/articles.md)
+- [.NET](posts/.NET/index.md)
 - [Engineering](posts/engineering/articles.md)
 - [How things work](posts/how-things-work/articles.md)
 
