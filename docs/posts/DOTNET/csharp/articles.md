@@ -16,7 +16,7 @@ Reliable software testing is essential for quality, but poorly written tests—e
 
 ***
 
-### [Mastering the C# Dispose Pattern]()(https://blog.ivankahl.com/csharp-dispose-pattern/) - by [Ivan Kahl](https://ivankahl.com/)
+### [Mastering the C# Dispose Pattern](https://blog.ivankahl.com/csharp-dispose-pattern/) - by [Ivan Kahl](https://ivankahl.com/)
 
 ***
 
@@ -34,3 +34,20 @@ The article details two primary implementations:
 This `disposing` boolean differentiates between a deterministic call (freeing *both* managed and unmanaged resources) and a finalizer call (freeing *only* unmanaged resources).
 
 The article also covers best practices, such as how to handle inheritance by overriding `Dispose(bool)`, and recommends using **`SafeHandle`** to wrap raw pointers, which simplifies the full pattern back to the basic one. Finally, it introduces **`IAsyncDisposable`** for resources requiring asynchronous cleanup, which is consumed using `await using`.
+
+***
+
+### [Introducing C# 14](https://devblogs.microsoft.com/dotnet/introducing-csharp-14) - by [Bill Wagner](https://devblogs.microsoft.com/dotnet/author/wiwagn/)
+
+***
+
+C# 14, shipping with .NET 10, brings significant updates focusing on developer productivity and runtime performance. The standout feature is **Extension Members**, which introduces a new syntax for defining extension properties, operators, and static members, fully compatible with existing extension methods.
+
+Key productivity features include:
+*   **The `field` keyword:** Simplifies properties by allowing access to the compiler-generated backing field, reducing the need for manual backing fields when adding minor logic.
+*   **Unbound generic types in `nameof`:** Allows expressions like `nameof(List<>)` without specifying type arguments.
+*   **Simple lambda parameters:** Enables the use of modifiers (e.g., `out`, `ref`) in lambdas without explicit type declarations.
+*   **Null-conditional assignment:** Supports direct assignment with null checks, such as `customer?.Order = value`.
+*   **Partial events and constructors:** Allows splitting event and constructor logic across partial type definitions.
+
+On the performance front, **Implicit Span Conversions** allow arrays and strings to convert implicitly to `Span<T>`, reducing verbosity. **User-Defined Compound Assignment** lets developers explicitly define operators like `+=` to optimize performance and avoid intermediate allocations.
