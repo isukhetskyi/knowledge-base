@@ -51,3 +51,19 @@ Key productivity features include:
 *   **Partial events and constructors:** Allows splitting event and constructor logic across partial type definitions.
 
 On the performance front, **Implicit Span Conversions** allow arrays and strings to convert implicitly to `Span<T>`, reducing verbosity. **User-Defined Compound Assignment** lets developers explicitly define operators like `+=` to optimize performance and avoid intermediate allocations.
+
+***
+
+### [Why Do You Need To Write Architecture Tests in .NET](https://antondevtips.com/blog/why-do-you-need-to-write-architecture-tests-in-dotnet) - by [Anton Martyniuk](https://antondevtips.com/)
+
+***
+
+As .NET projects grow, maintaining architectural integrity becomes harder than adding features. Developers often unintentionally introduce dependencies that violate design rules, leading to "architecture drift" that makes refactoring costly. While unit and integration tests verify functionality, they cannot detect structural violations.
+
+**Architecture Tests** solve this by enforcing high-level design rules as automated checks. They act as unit tests for your architecture, ensuring that:
+*   **Layer Dependencies** are respected (e.g., Domain should not depend on Infrastructure).
+*   **Naming Conventions** are followed (e.g., Controllers must end with "Controller").
+*   **Class Hierarchies** are consistent (e.g., all entities inherit from a base `Entity` class).
+*   **Module Boundaries** in Modular Monoliths are strictly maintained, preventing cross-module database access or internal type usage.
+
+Using libraries like **NetArchTest**, these rules become enforceable documentation that runs with your CI/CD pipeline. If a developer violates a rule (e.g., referencing a repository directly from a controller), the build fails immediately, preventing technical debt from accumulating silently.
