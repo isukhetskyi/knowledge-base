@@ -139,3 +139,18 @@ Debugging is a skill that can be mastered with the right mindset and strategies.
 *   **Document Progress:** Keep a log of what you've tried to avoid repeating failed experiments and to make asking for help easier.
 *   **Take Strategic Breaks:** Step away (walk, rest) to let your subconscious process the problem. Solutions often appear when you disengage.
 *   **Leverage AI Smartly:** Use AI tools as debugging partners. Provide them with full context (logs, code, recordings) to generate hypotheses you might have missed.
+
+
+### [What Actually Makes You Senior](https://terriblesoftware.org/2025/11/25/what-actually-makes-you-senior) - by [Matheus Lima](https://terriblesoftware.org/about/)
+
+***
+
+While senior engineers are often defined by checklists of skills like architecture or leadership, the author argues that the single most important differentiator is the ability to **reduce ambiguity**.
+
+Mid-level engineers excel at executing well-defined specifications. In contrast, senior engineers thrive when facing vague, abstract challenges (e.g., "we need to scale"). They add value by:
+
+* **Derisking projects:** Turning "fuzzy" requirements into concrete, actionable plans.
+* **Asking critical questions:** Identifying the root problem, specific user needs, and hidden assumptions before writing code.
+* **Separating signal from noise:** Determining what needs to be done now versus what can wait.
+
+The author critiques modern hiring practices, noting that interviews often focus on LeetCode puzzles rather than the ability to translate vague product requirements into execution. Ultimately, the true test of seniority is not just technical prowess, but whether an engineer waits for clarity or actively creates it so the team can execute with confidence.
