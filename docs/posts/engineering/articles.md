@@ -154,3 +154,22 @@ Mid-level engineers excel at executing well-defined specifications. In contrast,
 * **Separating signal from noise:** Determining what needs to be done now versus what can wait.
 
 The author critiques modern hiring practices, noting that interviews often focus on LeetCode puzzles rather than the ability to translate vague product requirements into execution. Ultimately, the true test of seniority is not just technical prowess, but whether an engineer waits for clarity or actively creates it so the team can execute with confidence.
+
+
+### [Becoming unblockable](https://www.seangoedecke.com/unblockable/) - by [Sean Goedecke](https://www.seangoedecke.com/)
+
+***
+
+The author outlines strategies for software engineers to become "unblockable"—meaning they can always make progress on their goals regardless of obstacles.
+
+**Key Strategies:**
+
+* **Work on multiple tasks:** Maintain more than one stream of work (like a CPU thread). If one task is blocked, switch to another. *Crucially*, avoid having two urgent/critical tasks simultaneously to prevent overload. Keep "filler" work like refactors or training available.
+* **Sequence work correctly:** Identify potential blockers (e.g., database migrations, controversial decisions) and tackle them first. This allows the slower processes to run in the background while you proceed with other work.
+* **Be ruthless about tooling:** Prioritize a stable, standard developer environment. Use common tools (e.g., VSCode if the team uses it) to minimize troubleshooting time. Fix environment issues immediately, but don't waste time "learning" from them—just get back to a working state.
+* **Debug outside your scope:** Don't immediately claim you are blocked by another service's error. Investigate the issue yourself by checking their codebase and logs. Use AI tools to help diagnose foreign code. Even if you can't fix it, your detailed report will speed up the resolution.
+* **Build relationships:** While formal channels exist, informal relationships are faster. Build social capital by being helpful to other teams (reviewing code, answering questions). This gives you "someone on the inside" to unblock you later.
+* **Acquire powerful allies:** Align your work with company goals to gain "air support" from directors or VPs. Don't be afraid to ask senior leadership to unblock high-priority projects; they often view this as proactive and competent behavior.
+
+**Summary:**
+By managing parallel tasks, prioritizing risky work, maintaining a reliable environment, debugging proactively, and leveraging both peer and leadership relationships, engineers can minimize downtime and consistently deliver results.
