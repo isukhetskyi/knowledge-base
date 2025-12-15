@@ -173,3 +173,26 @@ The author outlines strategies for software engineers to become "unblockable"—
 
 **Summary:**
 By managing parallel tasks, prioritizing risky work, maintaining a reliable environment, debugging proactively, and leveraging both peer and leadership relationships, engineers can minimize downtime and consistently deliver results.
+
+
+### [How good engineers write bad code at big companies](https://www.seangoedecke.com/bad-code-at-big-companies) - by [Sean Goedecke](https://www.seangoedecke.com/)
+
+***
+
+Despite high salaries and rigorous hiring standards, big tech companies often produce surprisingly sloppy code. The author argues that this is not due to incompetence, but because these companies are populated by engineers working outside their specific areas of expertise.
+
+**The "Beginner" Problem**
+High turnover rates, driven by compensation packages that incentivize leaving after four years, combined with frequent internal reorganizations, mean engineers rarely stay on a single team long-term. As a result, a significant percentage of code changes are made by "beginners"—engineers who have only been working with a specific codebase or language for a few months.
+
+**The Scarcity of "Old Hands"**
+While long-term experts ("old hands") exist, relying on them is problematic because:
+* **It is informal:** Companies make little effort to retain deep system expertise.
+* **They are overloaded:** Experts are often too busy with their own deliverables to thoroughly review every change made by newer team members.
+
+Consequently, the "median productive engineer" is often someone competent but rushing to meet deadlines in an unfamiliar environment. This leads to hacky solutions that are briefly reviewed and then permanently integrated into the system.
+
+**A Deliberate Trade-off**
+The article posits that this dynamic is a deliberate choice by tech companies. They prioritize **legibility** and **fungibility**—the ability to view engineers as interchangeable resources that can be rapidly redeployed to new priorities (like AI)—over deep expertise and code quality. Bad code is accepted as the cost of organizational agility.
+
+**Pure vs. Impure Engineering**
+The author concludes by distinguishing between "pure" engineering (where bad code indicates a lack of skill) and "impure" engineering (where engineers act like tradespeople working within strict constraints). Big tech operates as impure engineering. The root cause of bad code is not the quality of the engineer, but the structural decision to force most engineers to perform the majority of their work in unfamiliar codebases.

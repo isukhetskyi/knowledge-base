@@ -14,7 +14,6 @@ Reliable software testing is essential for quality, but poorly written tests—e
 
 5.  **Use Mocks Sparingly:** Mocks are necessary for isolating unit tests from external dependencies (like databases or APIs). However, mocking complex *internal* classes is a "red flag" indicating that the internal class itself is poorly designed and should be refactored.
 
-***
 
 ### [Mastering the C# Dispose Pattern](https://blog.ivankahl.com/csharp-dispose-pattern/) - by [Ivan Kahl](https://ivankahl.com/)
 
@@ -35,7 +34,6 @@ This `disposing` boolean differentiates between a deterministic call (freeing *b
 
 The article also covers best practices, such as how to handle inheritance by overriding `Dispose(bool)`, and recommends using **`SafeHandle`** to wrap raw pointers, which simplifies the full pattern back to the basic one. Finally, it introduces **`IAsyncDisposable`** for resources requiring asynchronous cleanup, which is consumed using `await using`.
 
-***
 
 ### [Introducing C# 14](https://devblogs.microsoft.com/dotnet/introducing-csharp-14) - by [Bill Wagner](https://devblogs.microsoft.com/dotnet/author/wiwagn/)
 
@@ -52,7 +50,6 @@ Key productivity features include:
 
 On the performance front, **Implicit Span Conversions** allow arrays and strings to convert implicitly to `Span<T>`, reducing verbosity. **User-Defined Compound Assignment** lets developers explicitly define operators like `+=` to optimize performance and avoid intermediate allocations.
 
-***
 
 ### [Why Do You Need To Write Architecture Tests in .NET](https://antondevtips.com/blog/why-do-you-need-to-write-architecture-tests-in-dotnet) - by [Anton Martyniuk](https://antondevtips.com/)
 
@@ -67,3 +64,40 @@ As .NET projects grow, maintaining architectural integrity becomes harder than a
 *   **Module Boundaries** in Modular Monoliths are strictly maintained, preventing cross-module database access or internal type usage.
 
 Using libraries like **NetArchTest**, these rules become enforceable documentation that runs with your CI/CD pipeline. If a developer violates a rule (e.g., referencing a repository directly from a controller), the build fails immediately, preventing technical debt from accumulating silently.
+
+
+### [.NET Performance: Efficient Async Code](https://trailheadtechnology.com/net-performance-efficient-async-code/) by [Nick Kovalenko](https://trailheadtechnology.com/author/nick-kovalenko/)
+
+***
+
+Asynchrony is fundamental to modern C# development, evolving from `Thread` and `BeginInvoke` to the Task Parallel Library (TPL) and finally the `async`/`await` keywords introduced in C# 5.
+
+**Core Concepts:**
+* **`Task`:** Represents a unit of work that completes eventually. It unifies handling synchronous completion (cached results), asynchronous completion (I/O), and ongoing work.
+* **`async` / `await`:** Syntactic sugar that simplifies asynchronous logic. Under the hood, the compiler transforms `async` methods into a state machine (a class in Debug, a struct in Release). This machine manages the method's execution flow, pausing at `await` points and resuming when the awaited task completes.
+
+**Performance & Benchmarks:**
+* **Synchronous Completion:** Returning a pre-completed `Task` (`Task.FromResult`) bypasses the state machine entirely, offering the best performance. An `async` method that completes synchronously still incurs slight overhead due to state machine generation.
+* **Asynchronous Completion:** Truly async methods involve heap allocations because the state machine struct must be boxed to persist state across `await` points.
+* **Allocations:** `Task` is a reference type, meaning it always requires heap allocation, even if the operation completes synchronously.
+
+**Task vs. ValueTask:**
+To mitigate `Task` allocations in scenarios where operations often complete synchronously, .NET introduced `ValueTask`.
+* **`ValueTask`** is a struct. If an operation completes synchronously, it incurs **zero heap allocations**.
+* **Usage Constraints:** Unlike `Task`, `ValueTask` cannot be awaited multiple times, accessed concurrently, or cached. It is ideal for high-throughput scenarios where results are often immediately available (e.g., buffering in streams).
+
+
+
+**Advanced Features:**
+* **Task Caching:** The runtime caches `Task<bool>` (true/false) and some small `Task<int>` values to reduce allocations.
+* **Duck Typing:** C# allows any type to be awaitable if it implements a `GetAwaiter()` method that returns a type with `IsCompleted` property and `GetResult()` method. This enables custom task-like types for domain-specific performance needs.
+
+**Optimization Tips:**
+1.  **Concurrency:** Use `Task.WhenAll`, `Task.WhenAny`, or `Task.WhenEach` for multiple tasks.
+2.  **Avoid Blocking:** Replace `.Result` or `.GetAwaiter().GetResult()` with `await` to prevent deadlocks and thread pool starvation.
+3.  **Caching:** Cache completed `Task<T>` instances for frequently reused synchronous results.
+4.  **Batching:** Group small async tasks on hot paths to reduce overhead.
+5.  **Streaming:** Use `IAsyncEnumerable<T>` for data that arrives gradually.
+6.  **Cancellation:** Always propagate `CancellationToken` to support responsive cancellation.
+
+By understanding the underlying state machine and choosing the right abstractions (`Task` vs `ValueTask`), developers can write C# code that is both clean and highly performant.
