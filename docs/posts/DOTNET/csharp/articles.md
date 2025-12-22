@@ -101,3 +101,47 @@ To mitigate `Task` allocations in scenarios where operations often complete sync
 6.  **Cancellation:** Always propagate `CancellationToken` to support responsive cancellation.
 
 By understanding the underlying state machine and choosing the right abstractions (`Task` vs `ValueTask`), developers can write C# code that is both clean and highly performant.
+
+
+### [How to Structure a .NET Solution That Actually Scales: Clean Architecture Guide](https://dev.to/mashrulhaque/how-to-design-a-maintainable-net-solution-structure-for-growing-teams-284n) - by [Mashrul Haque](https://dev.to/mashrulhaque)
+
+***
+
+Many .NET projects degrade into a mess of circular references and unclear boundaries because developers prioritize expedience over structure. This guide outlines a battle-tested approach to organization, rooted in Clean Architecture, that scales with team size and complexity.
+
+**The Solution Structure**
+Instead of organizing by technical type (e.g., Controllers, Helpers), use a layered structure with strictly enforced dependency rules:
+
+1. **`MyApp.Domain`:** The core. Contains entities, value objects, and repository interfaces. **Zero dependencies.**
+2. **`MyApp.Application`:** Use cases and feature logic (often implementing CQRS). References **only** Domain.
+3. **`MyApp.Infrastructure`:** External concerns like databases, APIs, and file systems. Implements interfaces defined in Application/Domain. References Application.
+4. **`MyApp.Api`:** The entry point (Web API). The composition root that wires everything together. References Application and Infrastructure.
+5. **`MyApp.Shared.Kernel` (Optional):** Common primitives (Result types, base Entities). Keep this thin to avoid a "junk drawer."
+
+**The Golden Rule: Dependency Direction**
+Dependencies must always point **inward** toward the Domain.
+
+* Correct: `Infrastructure` -> `Application` -> `Domain`
+* Incorrect: `Domain` -> `Infrastructure` (e.g., Domain referencing `System.Data.SqlClient`).
+* *Tip:* Use **NetArchTest** to enforce these rules via unit tests on day one.
+
+**Key Conventions**
+
+* **Vertical Slices:** Inside `MyApp.Application`, organize by feature (e.g., `Features/Orders/PlaceOrder/`), keeping commands, handlers, and validators together.
+* **Interface Placement:** Interfaces live where they are *used*, not implemented. `IOrderRepository` belongs in Domain; `OrderRepository` (implementation) belongs in Infrastructure.
+* **Project Naming:** Use `{Company}.{Product}.{Layer}` (e.g., `Contoso.Ordering.Domain`).
+
+**Common Mistakes to Avoid**
+
+1. **God Services:** Avoid `OrderService` classes with 50 methods. Break them into specific commands/queries.
+2. **Infrastructure Junk Drawer:** If Infrastructure gets too large, split it by concern (e.g., `Persistence`, `Email`).
+3. **Circular References:** Do not use a Shared project just to fix circular dependencies; this indicates a design flaw.
+
+**When to Split Solutions**
+Stick to a single solution (monolith) for teams under 15 developers. Multiple solutions introduce significant overhead (versioning, NuGet management, CI/CD complexity) that is rarely worth the cost until absolutely necessary.
+
+**Refactoring Legacy Code**
+Don't rewrite everything at once. Start by adding architecture tests to stop the bleeding. Then, incrementally extract the Domain, define interfaces to create boundaries, and finally move implementations to Infrastructure.
+
+**Final Thought**
+Good architecture makes the "correct" path the easiest one to follow. It isn't about perfection, but about guiding developers to make good decisions as the codebase grows.

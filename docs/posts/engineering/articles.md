@@ -196,3 +196,33 @@ The article posits that this dynamic is a deliberate choice by tech companies. T
 
 **Pure vs. Impure Engineering**
 The author concludes by distinguishing between "pure" engineering (where bad code indicates a lack of skill) and "impure" engineering (where engineers act like tradespeople working within strict constraints). Big tech operates as impure engineering. The root cause of bad code is not the quality of the engineer, but the structural decision to force most engineers to perform the majority of their work in unfamiliar codebases.
+
+
+### [21 Lessons from 14 Years at Google](https://addyo.substack.com/p/21-lessons-from-14-years-at-google) by [Addy Osmani](https://addyo.substack.com/)
+
+**Key lessons include:**
+
+* **User Obsession:** The best engineers work backward from user problems, not forward from exciting technology. Understanding the "why" often reveals simpler solutions.
+* **Alignment Over Being Right:** Winning every technical argument can lose you the project. Success comes from aligning the team on the problem, not proving you are the smartest person in the room.
+* **Bias Towards Action:** Ship imperfect work early. You learn more from real-world feedback than theoretical debate. "You can edit a bad page, but you can't edit a blank one."
+* **Clarity Over Cleverness:** Code is a communication tool for future maintainers. Senior engineers trade cleverness for clarity to reduce operational risk.
+* **Innovation Budget:** Treat novelty like a limited "innovation token." Default to boring, standard tools with known failure modes unless you are uniquely paid to innovate in a specific area.
+* **Advocacy Matters:** Your code does not speak for itself. You must make your impact legible to others, or it effectively doesn't exist.
+* **Code is a Liability:** The best code is the code you never wrote. Deleting code often improves a system more than adding it.
+* **Compatibility is Product:** At scale, every observable behavior of your system becomes a dependency for someone.
+* **Alignment Cures Slowness:** "Slow" teams are usually misaligned, not lazy. Senior engineers speed things up by clarifying direction and priorities.
+* **Control What You Can:** Ignore uncontrollable variables like reorgs. Focus on your sphere of influence—your work quality and how you respond to change.
+* **Understand Abstractions:** Abstractions leak. You need to understand the layers beneath you for when things break at 3 AM.
+* **Teaching is Learning:** Explaining concepts to others forces clarity and exposes gaps in your own understanding.
+* **Glue Work Must Be Visible:** Essential work like documentation and coordination is often invisible. Make it deliberate and visible, or it will hurt your career.
+* **Silent Resistance:** If you win every debate easily, people may have given up trying to convince you. This leads to resistance during execution.
+* **Metrics Get Gamed:** Every measure becomes a target. Counter this by pairing metrics (e.g., speed vs. quality) to gain insight rather than just hitting thresholds.
+* **Admit Ignorance:** Saying "I don't know" creates psychological safety for the team, encouraging curiosity and preventing hidden problems.
+* **Networks Outlast Jobs:** Invest in relationships. When you eventually move on, your network will be the key to new opportunities.
+* **Remove, Don't Add:** Performance wins often come from stopping unnecessary work rather than optimizing necessary work.
+* **Process Should Reduce Risk:** Good process eases coordination; bad process is just a paper trail for assigning blame.
+* **Time > Money:** Eventually, time becomes your most valuable resource. Make career trades deliberately.
+* **Compound Growth:** Expertise comes from deliberate practice over years. Treat your career like compound interest, not a lottery ticket.
+
+**Final Thought:**
+Success boils down to staying curious, remaining humble, and remembering that engineering is fundamentally about people—both the users you serve and the teammates you work with.
