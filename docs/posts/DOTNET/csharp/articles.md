@@ -145,3 +145,18 @@ Don't rewrite everything at once. Start by adding architecture tests to stop the
 
 **Final Thought**
 Good architecture makes the "correct" path the easiest one to follow. It isn't about perfection, but about guiding developers to make good decisions as the codebase grows.
+
+### [C# 14 Extension Members](https://laurentkempe.com/2025/12/29/csharp-14-extension-members-complete-guide) - by [Laurent Kempé](https://laurentkempe.com/)
+
+***
+
+C# 14 and .NET 10 introduce **extension members**, a major expansion of the traditional extension method feature. While traditional extension methods were limited to instance methods, C# 14 allows developers to add **properties, operators, and static members** to existing types without modifying their source code. This is achieved through a new `extension` keyword and block syntax that groups related extensions for a single type.
+
+**Key Features and Capabilities:**
+* **Extension Properties:** Developers can now define computed properties (e.g., `source.IsEmpty`) that feel native to the original type, improving readability over method calls.
+* **Static Extension Members:** Allows adding static constants, factory properties, or utility methods directly to a type (e.g., `Point.Origin`).
+* **Extension Operators:** Perhaps the most powerful addition, enabling the definition of mathematical operators (`+`, `-`, `*`) for types you don't control, such as `System.Drawing.Point`.
+* **Improved Organization:** Related extensions are grouped within `extension` blocks, eliminating the need for repeated `this` modifiers and providing a cleaner structure.
+* **Performance Enhancements:** Supports `ref`, `in`, and `ref readonly` modifiers for value types to avoid unnecessary copying, which is critical for performance-sensitive geometry or math libraries.
+
+The feature is designed for binary compatibility; traditional extension methods and the new extension members coexist seamlessly. While C# 14 focus is on methods, properties, and operators, it lays the groundwork for future extensions like indexers or even constructors. Extension members follow standard resolution rules, meaning they only fill gaps in existing APIs and cannot override native instance members. This evolution makes C# even more expressive, allowing for natural, domain-specific extensions to any library or framework.

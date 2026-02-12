@@ -226,3 +226,16 @@ The author concludes by distinguishing between "pure" engineering (where bad cod
 
 **Final Thought:**
 Success boils down to staying curious, remaining humble, and remembering that engineering is fundamentally about people—both the users you serve and the teammates you work with.
+
+
+### [Software engineers should be a little bit cynical](https://www.seangoedecke.com/a-little-bit-cynical/) - by [Sean Goedecke](https://www.seangoedecke.com/)
+
+***
+
+Sean Goedecke argues that a healthy amount of cynicism is essential for software engineers to think clearly about how organizations work and to avoid becoming deeply bitter or conspiratorial. He addresses the "idealist" view that sees large tech companies as fundamentally corrupt hellscapes, arguing that this perspective is actually more cynical because it suggests that positive change is impossible without total refusal to compromise.
+
+Goedecke reclaims cynicism as a tool for practical idealism. He suggests that meaningful problems in large organizations are almost always solved through political coordination—playing the "political game" rather than avoiding it as impure. While engineers aren't the primary decision-makers, they have significant influence in how they translate company direction into technical implementations that affect millions of users. He likens this role to public service: working within a large, messy system to steer it for the better.
+
+The article posits that a "slight" cynicism serves as inoculation. For example, understanding that bad code often results from structural constraints (like high turnover or reorgs) is more accurate and less demoralizing than believing in conspiracies or widespread incompetence. Ultimately, Goedecke argues that engineers who internalize a realistic model of corporate operation are better equipped to achieve their goals and avoid being burned out by the realities of big tech.
+
+
